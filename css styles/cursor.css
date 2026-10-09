@@ -1,0 +1,35 @@
+/* Custom pointer appearance */
+html {
+  cursor: url("https://cdn.custom-cursor.com/db/128/arrow-1.png"), auto;
+}
+
+/* Cursor dot appearance */
+body {
+  cursor: none;
+}
+
+.cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.cursor-dot::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+a:hover, button:hover {
+  cursor: none;
+}

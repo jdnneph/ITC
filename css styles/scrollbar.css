@@ -1,0 +1,134 @@
+/* Scrollbar appearance */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #583830 #192229;
+}
+
+/* Scroll and section reveal animation */
+html {
+    scroll-behavior: smooth;
+}
+
+/* section animations */
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section .Home-content,
+section .Portfolio-content,
+section .Services-content,
+section .Contact-content {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.8s ease 0.2s,
+        transform 0.8s ease 0.2s;
+}
+
+section.show .Home-content,
+section.show .Portfolio-content,
+section.show .Services-content,
+section.show .Contact-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section h1 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.7s ease 0.3s,
+        transform 0.7s ease 0.3s;
+}
+
+section p,
+section p1,
+section p2 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.7s ease 0.45s,
+        transform 0.7s ease 0.45s;
+}
+
+section .social-links {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.7s ease 0.6s,
+        transform 0.7s ease 0.6s;
+}
+
+section.show h1,
+section.show p,
+section.show p1,
+section.show p2,
+section.show .social-links {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.social-links a {
+    opacity: 0;
+    transform: translateY(15px);
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+}
+
+section.show .social-links a:nth-child(1) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.7s;
+}
+
+section.show .social-links a:nth-child(2) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.8s;
+}
+
+section.show .social-links a:nth-child(3) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.9s;
+}
+
+section.show .social-links a:nth-child(4) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1s;
+}
+
+section.show .social-links a:nth-child(5) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1.1s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    section,
+    section .Home-content,
+    section .Portfolio-content,
+    section .Services-content,
+    section .Contact-content,
+    section h1,
+    section p,
+    section p1,
+    section p2,
+    section .social-links,
+    .social-links a {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}

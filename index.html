@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script>
+    window.onload = function () {
+        window.scrollTo(0, 0);
+    };
+</script>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jade.kaisu.dev</title>
+    
+
+    <!--- Acknowledgements -->
+    <link rel="icon" type="image/png" href="images/html/favicon.png">
+    <link rel="stylesheet" href="css%20styles/navbar.css">
+    <link rel="stylesheet" href="css%20styles/scrollbar.css">
+    <link rel="stylesheet" href="css%20styles/texts.css">
+    <link rel="stylesheet" href="css%20styles/custom.css">
+    <link rel="stylesheet" href="css%20styles/cursor.css">
+    <script src="js%20files/navbar.js" defer></script>
+    <script src="js%20files/learn.js" defer></script>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <img src="images/html/favicon.png" alt="JADEKAISU logo" class="brand-logo">
+                <span>JADEKAISU</span>
+            </a>            
+            <button class="navbar-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span> 
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Home, first section -->
+    <section class="Home" id="home">
+        <div class="Home-inner home-image-left">
+            <div class="Home-visual">
+                <img src="images/html/portrait.jpeg" alt="Jaden Paraan portrait">
+            </div>
+            <div class="Home-content">
+                <h1 class="Home-title">
+                    <span class="small-line">I am</span>
+                    <span class="big-line">Jaden Paraan</span>
+                </h1>
+                <p>Curious and idea-driven creator motivated to create innovative solutions.
+                    being a student of LPU-Laguna in BSCS Game-Development, I am passionate
+                    about the creation of video games as well as other entertainment media.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio, Second section -->
+    <section class="Portfolio" id="portfolio">
+        <div class="Portfolio-content">
+            <h1>My Portfolio</h1>
+            <p>Check out some of my projects for a glimpse of my work.</p>
+
+            <div class="Portfolio-gallery">
+                <button class="Portfolio-arrow" type="button" aria-label="Previous image" onclick="changePortfolioSlide(-1)">&#10094;</button>
+
+                <img class="Portfolio-slide active" src="images/portfolio/eventually.png" alt="eventually">
+                <img class="Portfolio-slide" src="images/portfolio/elvis.png" alt="elvis">
+                <img class="Portfolio-slide" src="images/portfolio/nirvana.png" alt="nirvana">
+                <img class="Portfolio-slide" src="images/portfolio/blinding.png" alt="blinding">
+                <img class="Portfolio-slide" src="images/portfolio/weeknd.png" alt="weeknd">
+
+                <button class="Portfolio-arrow" type="button" aria-label="Next image" onclick="changePortfolioSlide(1)">&#10095;</button>
+            </div>
+            <p1>Photo Editing work</p1>
+        </div>
+    </section>
+
+    <!-- Services, Third section -->
+     <section class="Services" id="services">
+        <div class="Services-content">
+            <h1>My Services</h1>
+            <p>Explore the range of services I offer to help bring your ideas to life.</p>
+
+            <div class="services-grid">
+                <div class="service-item">
+                    <img src="images/services/programming.png" alt="programming">
+                    <h3>Programming</h3>
+                </div>
+                <div class="service-item">
+                    <img src="images/services/research.png" alt="Research">
+                    <h3>Research</h3>
+                </div>
+                <div class="service-item">
+                    <img src="images/services/editing.png" alt="editing">
+                    <h3>Photo Editing</h3>
+                </div>
+                <div class="service-item">
+                    <img src="images/services/voiceacting.png" alt="voice acting">
+                    <h3>Voice Acting</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact, Fourth section -->
+     <section class="Contact" id="contact">
+        <div class="Contact-content">
+            <h1>Contact Me</h1>
+            <p1>Get in touch with me for any inquiries or collaboration opportunities.</p1>
+
+            <div class="social-links">
+            <a href="https://www.facebook.com/JadenParaan21" target="_blank">Facebook</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://gmail.com" target="_blank">Gmail</a>
+            <a href="https://www.youtube.com/@Nephyyyyszxz" target="_blank">Youtube</a>
+            <a href="https://github.com/jdnneph" target="_blank">Github</a>
+            </div>
+
+            <p2>&copy; 2026 Jaden Paraan. All rights reserved.</p2>
+        </div>
+    </section>
+
+    <div class="cursor-dot" aria-hidden="true"></div>
+
+    <script>
+        const dot = document.querySelector('.cursor-dot');
+
+        window.addEventListener('mousemove', (event) => {
+            dot.style.left = event.clientX + 'px';
+            dot.style.top = event.clientY + 'px';
+        });
+
+        const portfolioSlides = Array.from(document.querySelectorAll('.Portfolio-slide'));
+        let currentPortfolioIndex = 0;
+
+        function changePortfolioSlide(direction) {
+            currentPortfolioIndex = (currentPortfolioIndex + direction + portfolioSlides.length) % portfolioSlides.length;
+
+            portfolioSlides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentPortfolioIndex);
+                slide.style.opacity = index === currentPortfolioIndex ? '1' : '0.55';
+                slide.style.transform = index === currentPortfolioIndex ? 'scale(1)' : 'scale(0.82)';
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+/* Home section typography and text colors */
+.Home h1 {
+    font-family: 'poppins', sans-serif;
+    color: white;
+}
+.Home p {
+    font-family: 'Georgia', sans-serif;
+    color: white;
+}
+
+/* Portfolio section typography and text colors */
+.Portfolio h1,
+.Portfolio p {
+    color: white;
+}
+
+.Portfolio p1 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    display: block;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Services section typography and layout */
+
+.Services h1,
+.Services p {
+    color: white;
+}
+
+.Services-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-item {
+    text-align: center;
+    color: white;
+}
+
+.service-item img {
+    width: min(100%, 220px);
+    height: 170px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 0.8rem;
+    padding: 18px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    box-sizing: border-box;
+}
+
+.service-item h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: white;
+}
+
+/* Contact section typography and layout */
+.Contact h1,
+.Contact p1,
+.Contact p2 {
+    color: white;
+    text-align: center;
+}
+
+/* Text styling for p1 Content section */
+.Contact p1 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    display: block;
+    width: 100%;
+}
+
+/* Text styling for p2 Content section */
+.Contact p2 {
+    font-size: 12px;
+    font-weight: 300;
+    color: #b66b6b;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #555555;
+    letter-spacing: 1px;
+    display: block;
+    width: 100%;
+}
+
+.Contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.Contact .contact-content {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.social-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.social-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.social-links a:hover{
+    color:#583830;
+}
+
+.social-links {
+    gap: 35px;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation when element is visible */
+.fade-in {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Start invisible */
+.fade-in-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* Stagger effect for social links */
+.social-links a:nth-child(1) { animation-delay: 0s; }
+.social-links a:nth-child(2) { animation-delay: 0.1s; }
+.social-links a:nth-child(3) { animation-delay: 0.2s; }
+.social-links a:nth-child(4) { animation-delay: 0.3s; }
+.social-links a:nth-child(5) { animation-delay: 0.4s; }
+
+section:not(.Contact) {
+    padding: 20px 5% 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}

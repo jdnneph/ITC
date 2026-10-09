@@ -1,0 +1,135 @@
+/* Global page layout and appearance */
+section {
+    min-height: 100vh;
+}
+
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    font-size: clamp(10px, 0.9vw + 0.8rem, 20px);
+    background: url('../images/html/backgroundhero.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+/* Home section layout */
+.Home {
+    padding: 120px 6%;
+}
+
+.Home-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.Home-inner.home-image-left {
+    flex-direction: row;
+}
+
+.Home-inner.home-image-right {
+    flex-direction: row-reverse;
+}
+
+.Home-visual {
+    flex: 1 1 420px;
+    display: flex;
+    justify-content: center;
+}
+
+.Home-visual img {
+    width: min(420px, 100%);
+    height: 520px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.Home-content {
+    flex: 1 1 500px;
+}
+
+.Home-title {
+    margin: 0 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    line-height: 0.95;
+}
+
+.Home-title .small-line {
+    font-size: clamp(1.5rem, 2vw, 2.2rem);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: white;
+}
+
+.Home-title .big-line {
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: white;
+}
+
+/* Portfolio section layout */
+.Portfolio {
+    padding: 0 6% 80px;
+}
+
+.Portfolio-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Portfolio h1 {
+    margin-top: 0;
+}
+
+.Portfolio-gallery {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 2rem;
+    min-height: 420px;
+}
+
+.Portfolio-slide {
+    width: 180px;
+    height: 260px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    opacity: 0.55;
+    transform: scale(0.82);
+    transition: all 0.35s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.Portfolio-slide.active {
+    width: 340px;
+    height: 420px;
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+}
+
+.Portfolio-arrow {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.Portfolio-arrow:hover {
+    background: rgba(255, 255, 255, 0.18);
+}

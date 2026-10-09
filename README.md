@@ -1,2 +1,0 @@
-# ITC
-Introduction to Computing
